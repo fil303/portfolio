@@ -1,0 +1,189 @@
+/* =========================================================
+   Israfil Hossain — portfolio shared styles
+   Used by index.html and every project detail page.
+   ========================================================= */
+:root{
+  --forest:#0b5d39;
+  --forest-deep:#0b3d2a;
+  --emerald:#18b866;
+  --mint:#7ce8ad;
+}
+*{ scrollbar-width: thin; scrollbar-color: var(--emerald) transparent; }
+html,body{ overflow-x:hidden; }
+body{
+  font-family:'Sora',sans-serif;
+  background:
+    radial-gradient(1100px 600px at 82% -8%, rgba(24,184,102,.14), transparent 60%),
+    radial-gradient(900px 700px at -6% 18%, rgba(11,93,57,.10), transparent 55%),
+    radial-gradient(1000px 900px at 50% 110%, rgba(124,232,173,.16), transparent 60%),
+    #f5fbf7;
+  color:#0b241a;
+}
+::selection{ background:var(--emerald); color:#fff; }
+
+/* ---------- Custom cursor ---------- */
+@media (hover:hover) and (pointer:fine){
+  *{ cursor:none; }
+  .cursor-dot,.cursor-ring{
+    position:fixed; top:0; left:0; border-radius:50%;
+    pointer-events:none; z-index:9999; mix-blend-mode:multiply;
+    transform:translate(-50%,-50%);
+  }
+  .cursor-dot{ width:8px; height:8px; background:var(--emerald); transition:width .2s,height .2s,background .2s; }
+  .cursor-ring{
+    width:38px; height:38px; border:1.5px solid rgba(12,149,82,.55);
+    transition:transform .14s ease-out, width .25s, height .25s, border-color .25s, background .25s;
+  }
+  .cursor-ring.active{ width:64px; height:64px; border-color:var(--emerald); background:rgba(24,184,102,.10); }
+}
+
+/* ---------- Scroll progress ---------- */
+#scrollbar{
+  position:fixed; top:0; left:0; height:3px; width:0%;
+  background:linear-gradient(90deg,var(--forest),var(--emerald),var(--mint));
+  z-index:9998; box-shadow:0 0 12px rgba(24,184,102,.7);
+}
+
+/* ---------- Glass ---------- */
+.glass{
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:0 10px 40px -12px rgba(11,61,42,.25);
+}
+.glass-deep{
+  background:linear-gradient(135deg, rgba(11,61,42,.92), rgba(11,93,57,.88));
+  backdrop-filter:blur(14px); border:1px solid rgba(124,232,173,.25);
+}
+
+/* ---------- Animated gradient border ---------- */
+.border-glow{ position:relative; border-radius:1.25rem; }
+.border-glow::before{
+  content:""; position:absolute; inset:0; border-radius:inherit; padding:1.5px;
+  background:linear-gradient(120deg,var(--emerald),var(--mint),var(--forest),var(--emerald));
+  background-size:300% 300%;
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  animation:bordermove 6s linear infinite; opacity:.9;
+}
+@keyframes bordermove{ 0%{background-position:0% 50%} 100%{background-position:300% 50%} }
+
+/* ---------- Shiny button ---------- */
+.btn-shine{ position:relative; overflow:hidden; isolation:isolate; }
+.btn-shine::after{
+  content:""; position:absolute; top:0; left:-120%; width:60%; height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-20deg); transition:left .6s ease;
+}
+.btn-shine:hover::after{ left:130%; }
+
+.float-slow{ animation:float 6s ease-in-out infinite; }
+@keyframes float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+
+/* ---------- Reveal (only hides when JS is active, so content is never lost) ---------- */
+html.js .reveal{ opacity:0; transform:translateY(40px); transition:opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1); }
+html.js .reveal.show{ opacity:1; transform:none; }
+
+/* Hero animates in with pure CSS — never depends on JS/observer */
+.fade-up{ animation:fadeUp .9s cubic-bezier(.2,.8,.2,1) both; }
+.fade-up.delay{ animation-delay:.18s; }
+@keyframes fadeUp{ from{opacity:0; transform:translateY(40px);} to{opacity:1; transform:none;} }
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important; animation-delay:0ms !important;
+    transition-duration:.01ms !important; transition-delay:0ms !important;
+  }
+  html.js .reveal{ opacity:1; transform:none; }
+}
+
+/* ---------- Skill bar (real width lives inline in the HTML, so bars are
+   always accurate even with no JS; JS collapses then re-fills them) ---------- */
+.skill-fill{ transition:width 1.4s cubic-bezier(.2,.8,.2,1); }
+
+.nav-link{ position:relative; }
+.nav-link::after{
+  content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0;
+  background:linear-gradient(90deg,var(--emerald),var(--forest)); transition:width .3s;
+}
+.nav-link:hover::after, .nav-link.active::after{ width:100%; }
+.nav-link.active{ color:var(--forest); }
+
+.tilt{ transform-style:preserve-3d; transition:transform .18s ease-out; will-change:transform; }
+
+.text-gradient{
+  background:linear-gradient(120deg,var(--forest-deep),var(--emerald) 55%,var(--forest));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+.badge-pulse::before{
+  content:""; display:inline-block; width:8px; height:8px; border-radius:50%;
+  background:#2563eb; margin-right:8px; box-shadow:0 0 0 0 rgba(37,99,235,.6);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)} 70%{box-shadow:0 0 0 10px rgba(37,99,235,0)} 100%{box-shadow:0 0 0 0 rgba(37,99,235,0)} }
+
+.grid-bg{
+  background-image:linear-gradient(rgba(11,93,57,.05) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(11,93,57,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+
+/* ---------- Social buttons & chips ---------- */
+.social{
+  width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center;
+  border-radius:14px; color:#0b5d39;
+  background:rgba(255,255,255,.6); border:1px solid rgba(11,93,57,.15);
+  backdrop-filter:blur(10px); transition:.25s;
+}
+.social:hover{ color:#fff; background:linear-gradient(135deg,#0b5d39,#18b866); transform:translateY(-3px); box-shadow:0 10px 22px -8px rgba(24,184,102,.6); }
+.social-dark{
+  width:42px; height:42px; display:inline-flex; align-items:center; justify-content:center;
+  border-radius:12px; color:#7ce8ad; background:rgba(255,255,255,.08); border:1px solid rgba(124,232,173,.25); transition:.25s;
+}
+.social-dark:hover{ color:#0b3d2a; background:#7ce8ad; transform:translateY(-3px); }
+.chip{
+  padding:.45rem 1rem; border-radius:999px; font-size:.8rem; font-weight:600; color:#0a7644;
+  background:rgba(255,255,255,.6); border:1px solid rgba(11,93,57,.15); transition:.2s;
+}
+.chip:hover{ background:#0b5d39; color:#fff; transform:translateY(-2px); }
+
+/* =========================================================
+   Project detail pages
+   ========================================================= */
+.project-card{ display:block; color:inherit; text-decoration:none; }
+
+/* Back-to-top floating button */
+#toTop{
+  position:fixed; right:24px; bottom:24px; z-index:60;
+  width:52px; height:52px; display:grid; place-items:center; border-radius:16px;
+  color:#fff; background:linear-gradient(135deg,var(--forest-deep),var(--emerald));
+  box-shadow:0 12px 30px -10px rgba(11,93,57,.7);
+  opacity:0; visibility:hidden; transform:translateY(14px); transition:.3s;
+}
+#toTop.show{ opacity:1; visibility:visible; transform:none; }
+#toTop:hover{ transform:translateY(-3px); }
+
+/* Bulleted feature lists */
+.feature-list{ list-style:none; padding:0; margin:0; }
+.feature-list li{
+  position:relative; padding-left:1.75rem; margin-bottom:.85rem;
+  color:rgba(11,36,26,.72); line-height:1.65;
+  /* Keep a bullet whole — without this a two-column list splits an item
+     across the column break and orphans its tail at the top of column 2. */
+  break-inside:avoid; -webkit-column-break-inside:avoid; page-break-inside:avoid;
+}
+.feature-list li::before{
+  content:""; position:absolute; left:0; top:.55em;
+  width:9px; height:9px; border-radius:3px;
+  background:linear-gradient(135deg,var(--forest),var(--emerald));
+}
+.feature-list li strong{ color:#0b3d2a; font-weight:600; }
+
+/* Numbered "challenge" blocks */
+.challenge{ counter-increment:ch; }
+.challenge .num{
+  width:38px; height:38px; flex:none; border-radius:12px; display:grid; place-items:center;
+  font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff;
+  background:linear-gradient(135deg,var(--forest-deep),var(--emerald));
+}

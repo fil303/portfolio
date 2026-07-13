@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto P2P Selling Platform — Israfil Hossain</title>
+  <meta name="description" content="A peer-to-peer marketplace where users buy and sell crypto directly with each other, protected by escrow — built end to end, frontend and backend." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body id="top" class="antialiased">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div id="scrollbar"></div>
+
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto mt-3 px-5 py-3 glass rounded-2xl flex items-center justify-between mx-4 md:mx-auto">
+      <a href="index.html" class="flex items-center gap-2 font-grotesk font-bold text-lg tracking-tight text-forest-900 nav-target">
+        <span class="grid place-items-center w-9 h-9 rounded-xl glass-deep text-mint font-sora">IH</span>
+        <span class="hidden sm:block">Israfil<span class="text-forest-500">.</span></span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium text-forest-900/80">
+        <li><a href="index.html#home"     class="nav-link nav-target">Home</a></li>
+        <li><a href="index.html#story"    class="nav-link nav-target">Story</a></li>
+        <li><a href="index.html#skills"   class="nav-link nav-target">Skills</a></li>
+        <li><a href="index.html#projects" class="nav-link nav-target active">Projects</a></li>
+        <li><a href="index.html#contact"  class="nav-link nav-target">Contact</a></li>
+      </ul>
+
+      <a href="index.html#contact" class="hidden md:inline-flex btn-shine nav-target items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-forest-800 to-forest-500 shadow-lg shadow-forest-500/30 hover:shadow-forest-500/50 transition-shadow">
+        Let's talk
+      </a>
+
+      <button id="menuBtn" class="md:hidden nav-target w-10 h-10 grid place-items-center rounded-xl glass text-forest-900" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="md:hidden hidden mx-4 mt-2 glass rounded-2xl p-4">
+      <ul class="flex flex-col gap-1 text-forest-900 font-medium">
+        <li><a href="index.html#home"     class="block px-4 py-3 rounded-xl hover:bg-forest-50">Home</a></li>
+        <li><a href="index.html#story"    class="block px-4 py-3 rounded-xl hover:bg-forest-50">Story</a></li>
+        <li><a href="index.html#skills"   class="block px-4 py-3 rounded-xl hover:bg-forest-50">Skills</a></li>
+        <li><a href="index.html#projects" class="block px-4 py-3 rounded-xl hover:bg-forest-50">Projects</a></li>
+        <li><a href="index.html#contact"  class="block px-4 py-3 rounded-xl hover:bg-forest-50">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= PROJECT HERO ================= -->
+  <section class="relative pt-36 pb-16 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-60"></div>
+    <div class="absolute -top-24 right-0 w-[28rem] h-[28rem] rounded-full bg-forest-200/40 blur-3xl"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6">
+      <a href="index.html#projects" class="nav-target inline-flex items-center gap-2 text-sm font-semibold text-forest-600 hover:text-forest-800 transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        Back to projects
+      </a>
+
+      <div class="fade-up mt-7 flex items-start gap-5">
+        <div class="w-16 h-16 flex-none rounded-2xl glass-deep grid place-items-center text-3xl">🔁</div>
+        <div>
+          <span class="text-xs font-semibold text-forest-500 bg-forest-50 border border-forest-100 px-3 py-1 rounded-full">Full Stack Developer</span>
+          <h1 class="font-grotesk font-bold text-4xl sm:text-5xl text-forest-950 mt-3 leading-tight">Crypto P2P Selling Platform</h1>
+        </div>
+      </div>
+
+      <p class="fade-up delay mt-6 text-lg text-forest-900/70 leading-relaxed max-w-3xl">A peer-to-peer marketplace where users buy and sell crypto directly with each other, protected by escrow — built end to end, frontend and backend.</p>
+
+      <div class="fade-up delay mt-8 flex flex-wrap gap-2">
+        <span class="chip">Laravel</span>
+        <span class="chip">Bootstrap</span>
+        <span class="chip">Redis</span>
+        <span class="chip">Nginx</span>
+        <span class="chip">PHP 8.4</span>
+        <span class="chip">MySQL</span>
+      </div>
+
+      <div class="fade-up delay mt-10 grid sm:grid-cols-3 gap-4">
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Role</p>
+          <p class="font-semibold text-forest-900 mt-1">Full Stack Developer</p>
+        </div>
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Stack</p>
+          <p class="font-semibold text-forest-900 mt-1">Laravel · Bootstrap</p>
+        </div>
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Core</p>
+          <p class="font-semibold text-forest-900 mt-1">Escrow-backed P2P</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BODY ================= -->
+  <main class="relative max-w-5xl mx-auto px-6 pb-24 space-y-6">
+
+    <!-- Overview -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Overview</h2>
+      <div class="mt-4 space-y-4 text-forest-900/70 leading-relaxed">
+        <p>Instead of trading against an order book, users here trade directly with each other: a seller posts an advert with their price and payment methods, a buyer takes it, and the platform holds the crypto in escrow while the two settle payment between themselves.</p>
+        <p>This one I built as a <strong>full stack</strong> developer — the Bootstrap frontend as well as the Laravel backend, the database design, the escrow flow and the wallet layer.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Key Features</h2>
+      <ul class="feature-list mt-6 sm:columns-2 sm:gap-10">
+        <li><strong>Buy & sell adverts</strong> — users post offers with their own price, limits and accepted payment methods.</li>
+        <li><strong>Escrow protection</strong> — the seller's crypto is locked by the platform the moment an order opens, and only released once payment is confirmed.</li>
+        <li><strong>Order state machine</strong> — opened → paid → released → completed, with cancellation and expiry handled at every step.</li>
+        <li><strong>In-order chat</strong> — buyer and seller communicate inside the order to confirm payment.</li>
+        <li><strong>Dispute resolution</strong> — either side can raise a dispute, which routes to an admin panel for arbitration.</li>
+        <li><strong>Secure wallet management</strong> — deposits, withdrawals and balances backing every trade.</li>
+        <li><strong>Reputation</strong> — completion rate and ratings so users can judge who they're trading with.</li>
+      </ul>
+    </section>
+
+    <!-- Responsibilities -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">What I Did</h2>
+      <ul class="feature-list mt-6">
+        <li>Built the entire platform — frontend (Bootstrap, JavaScript) and backend (Laravel, MySQL).</li>
+        <li>Designed and implemented the peer-to-peer trading system: adverts, order matching and the full order lifecycle.</li>
+        <li>Implemented the escrow mechanism that locks seller funds for the duration of an order.</li>
+        <li>Built the dispute flow and the admin arbitration screens behind it.</li>
+        <li>Implemented secure wallet management for deposits, withdrawals and balances.</li>
+        <li>Used <strong>Redis</strong> for caching and deployed behind <strong>Nginx</strong> on an Ubuntu VPS.</li>
+      </ul>
+    </section>
+
+    <!-- Challenges -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Challenges &amp; How I Solved Them</h2>
+      <div class="mt-6 space-y-6">
+        <div class="challenge flex gap-4">
+          <div class="num">1</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Nobody can be trusted with the other side&#x27;s money</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">Escrow is the whole product. Crypto is locked out of the seller's spendable balance at order creation and can only move to the buyer on confirmed payment, or back to the seller on cancellation — never both.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">2</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Orders that go quiet</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">A buyer who opens an order and disappears would lock a seller's funds forever. Orders carry a payment window and auto-cancel on expiry, releasing the escrow back to the seller.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">3</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Disputes</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">When the two parties disagree about whether payment landed, the funds stay in escrow and an admin decides — with the order's chat and timeline as the evidence trail.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">4</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Double-spending a balance</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">The same balance must not back two adverts at once. Escrow locks and balance mutations run inside database transactions, so funds can only be committed to one order.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="reveal border-glow rounded-3xl">
+      <div class="glass-deep rounded-3xl p-8 sm:p-10">
+        <h2 class="font-grotesk font-bold text-2xl text-white">Tech Stack</h2>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Laravel</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Bootstrap</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Redis</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Nginx</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">PHP 8.4</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">MySQL</span>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="reveal flex flex-col sm:flex-row items-center justify-between gap-5 glass rounded-3xl p-8 sm:p-10">
+      <div>
+        <h2 class="font-grotesk font-bold text-xl text-forest-950">Want the full picture?</h2>
+        <p class="text-forest-900/65 mt-1">Browse the other case studies, or get in touch about a role or project.</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="index.html#projects" class="nav-target inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-forest-800 border border-forest-300 hover:bg-forest-50 transition-colors">
+          All projects
+        </a>
+        <a href="index.html#contact" class="btn-shine nav-target inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-forest-800 to-forest-500 shadow-lg shadow-forest-500/30 hover:-translate-y-0.5 transition-transform">
+          Contact me
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-forest-100 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-forest-700">
+      <p>© <span id="year"></span> Israfil Hossain — Full Stack Developer</p>
+      <p class="text-forest-500">Built with Tailwind · Three.js · lots of ☕</p>
+    </div>
+  </footer>
+
+  <a href="#top" id="toTop" class="nav-target" aria-label="Back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

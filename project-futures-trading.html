@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Future Trading — Israfil Hossain</title>
+  <meta name="description" content="Leveraged perpetual futures — traders go long or short without owning the underlying asset, with continuous PnL, margin, automatic liquidation and funding " />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body id="top" class="antialiased">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div id="scrollbar"></div>
+
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto mt-3 px-5 py-3 glass rounded-2xl flex items-center justify-between mx-4 md:mx-auto">
+      <a href="index.html" class="flex items-center gap-2 font-grotesk font-bold text-lg tracking-tight text-forest-900 nav-target">
+        <span class="grid place-items-center w-9 h-9 rounded-xl glass-deep text-mint font-sora">IH</span>
+        <span class="hidden sm:block">Israfil<span class="text-forest-500">.</span></span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium text-forest-900/80">
+        <li><a href="index.html#home"     class="nav-link nav-target">Home</a></li>
+        <li><a href="index.html#story"    class="nav-link nav-target">Story</a></li>
+        <li><a href="index.html#skills"   class="nav-link nav-target">Skills</a></li>
+        <li><a href="index.html#projects" class="nav-link nav-target active">Projects</a></li>
+        <li><a href="index.html#contact"  class="nav-link nav-target">Contact</a></li>
+      </ul>
+
+      <a href="index.html#contact" class="hidden md:inline-flex btn-shine nav-target items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-forest-800 to-forest-500 shadow-lg shadow-forest-500/30 hover:shadow-forest-500/50 transition-shadow">
+        Let's talk
+      </a>
+
+      <button id="menuBtn" class="md:hidden nav-target w-10 h-10 grid place-items-center rounded-xl glass text-forest-900" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="md:hidden hidden mx-4 mt-2 glass rounded-2xl p-4">
+      <ul class="flex flex-col gap-1 text-forest-900 font-medium">
+        <li><a href="index.html#home"     class="block px-4 py-3 rounded-xl hover:bg-forest-50">Home</a></li>
+        <li><a href="index.html#story"    class="block px-4 py-3 rounded-xl hover:bg-forest-50">Story</a></li>
+        <li><a href="index.html#skills"   class="block px-4 py-3 rounded-xl hover:bg-forest-50">Skills</a></li>
+        <li><a href="index.html#projects" class="block px-4 py-3 rounded-xl hover:bg-forest-50">Projects</a></li>
+        <li><a href="index.html#contact"  class="block px-4 py-3 rounded-xl hover:bg-forest-50">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= PROJECT HERO ================= -->
+  <section class="relative pt-36 pb-16 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-60"></div>
+    <div class="absolute -top-24 right-0 w-[28rem] h-[28rem] rounded-full bg-forest-200/40 blur-3xl"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6">
+      <a href="index.html#projects" class="nav-target inline-flex items-center gap-2 text-sm font-semibold text-forest-600 hover:text-forest-800 transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        Back to projects
+      </a>
+
+      <div class="fade-up mt-7 flex items-start gap-5">
+        <div class="w-16 h-16 flex-none rounded-2xl glass-deep grid place-items-center text-3xl">⚡</div>
+        <div>
+          <span class="text-xs font-semibold text-forest-500 bg-forest-50 border border-forest-100 px-3 py-1 rounded-full">Backend Developer</span>
+          <h1 class="font-grotesk font-bold text-4xl sm:text-5xl text-forest-950 mt-3 leading-tight">Crypto Future Trading</h1>
+        </div>
+      </div>
+
+      <p class="fade-up delay mt-6 text-lg text-forest-900/70 leading-relaxed max-w-3xl">Leveraged perpetual futures — traders go long or short without owning the underlying asset, with continuous PnL, margin, automatic liquidation and funding fees.</p>
+
+      <div class="fade-up delay mt-8 flex flex-wrap gap-2">
+        <span class="chip">Laravel</span>
+        <span class="chip">NextJS</span>
+        <span class="chip">Redis</span>
+        <span class="chip">Nginx</span>
+        <span class="chip">PHP 8.4</span>
+        <span class="chip">MySQL</span>
+      </div>
+
+      <div class="fade-up delay mt-10 grid sm:grid-cols-3 gap-4">
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Role</p>
+          <p class="font-semibold text-forest-900 mt-1">Backend Developer</p>
+        </div>
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Stack</p>
+          <p class="font-semibold text-forest-900 mt-1">Laravel · Next.js</p>
+        </div>
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Domain</p>
+          <p class="font-semibold text-forest-900 mt-1">Perpetual futures</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BODY ================= -->
+  <main class="relative max-w-5xl mx-auto px-6 pb-24 space-y-6">
+
+    <!-- Overview -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Overview</h2>
+      <div class="mt-4 space-y-4 text-forest-900/70 leading-relaxed">
+        <p>Futures trading lets a trader speculate on whether a coin's price will rise or fall without ever holding it. They open a <strong>long</strong> to profit from an increase or a <strong>short</strong> to profit from a decrease, and use leverage to control a larger position than their capital would otherwise allow.</p>
+        <p>As the market moves, unrealized profit and loss is recalculated continuously. If losses eat through the available margin, the position is liquidated automatically. Traders can close at any time to realize the result, and the platform charges trading fees plus a periodic funding fee exchanged between longs and shorts.</p>
+        <p>I built and maintained the backend behind all of that — the position engine, the margin and liquidation logic, and the APIs the Next.js frontend and the mobile app consume.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Key Features</h2>
+      <ul class="feature-list mt-6 sm:columns-2 sm:gap-10">
+        <li><strong>Long & short positions</strong> — open in either direction on any supported perpetual contract.</li>
+        <li><strong>Leverage</strong> — configurable multipliers, with margin requirements enforced at open and on every update.</li>
+        <li><strong>Continuous PnL</strong> — unrealized profit/loss recalculated against the mark price as it moves.</li>
+        <li><strong>Automatic liquidation</strong> — positions whose losses exceed available margin are closed by the engine, not by hand.</li>
+        <li><strong>Funding fees</strong> — periodic funding settled between long and short holders on a fixed cycle.</li>
+        <li><strong>Take-profit & stop-loss</strong> — pre-set exits that trigger without the trader being online.</li>
+        <li><strong>Position & order history</strong> — full audit trail of every entry, exit, fee and liquidation.</li>
+      </ul>
+    </section>
+
+    <!-- Responsibilities -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">What I Did</h2>
+      <ul class="feature-list mt-6">
+        <li>Built the position engine: opening, adjusting, partially closing and fully closing leveraged positions.</li>
+        <li>Implemented margin accounting and the liquidation trigger, so an underwater position is closed before it can go negative.</li>
+        <li>Implemented the funding-fee cycle that periodically settles value between long and short holders.</li>
+        <li>Designed and optimized the APIs used by the Next.js frontend and the mobile app.</li>
+        <li>Used <strong>Redis</strong> for mark-price and position-state reads that are hit on every tick.</li>
+        <li>Ran PnL, liquidation checks and funding settlement on queue workers so they don't block user requests.</li>
+      </ul>
+    </section>
+
+    <!-- Challenges -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Challenges &amp; How I Solved Them</h2>
+      <div class="mt-6 space-y-6">
+        <div class="challenge flex gap-4">
+          <div class="num">1</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">PnL that has to be right, continuously</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">Unrealized PnL changes on every price tick for every open position. Recomputing it lazily on read — and caching the inputs in Redis — kept the cost bounded instead of scaling with the number of open positions times the tick rate.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">2</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Liquidating in time</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">A liquidation that fires late can leave the account with negative equity. Margin is re-checked on every price update, and the liquidation path is kept short so it can execute before the position goes underwater.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">3</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Money arithmetic</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">Leverage multiplies rounding errors. Financial values are handled with precise decimal arithmetic rather than floats, so fees, PnL and margin all reconcile exactly.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">4</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Funding on a strict schedule</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">Funding must be applied once per cycle to every open position — no more, no less. Settlement is idempotent and keyed per position per cycle, so a retried job can't charge a trader twice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="reveal border-glow rounded-3xl">
+      <div class="glass-deep rounded-3xl p-8 sm:p-10">
+        <h2 class="font-grotesk font-bold text-2xl text-white">Tech Stack</h2>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Laravel</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">NextJS</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Redis</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Nginx</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">PHP 8.4</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">MySQL</span>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="reveal flex flex-col sm:flex-row items-center justify-between gap-5 glass rounded-3xl p-8 sm:p-10">
+      <div>
+        <h2 class="font-grotesk font-bold text-xl text-forest-950">Want the full picture?</h2>
+        <p class="text-forest-900/65 mt-1">Browse the other case studies, or get in touch about a role or project.</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="index.html#projects" class="nav-target inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-forest-800 border border-forest-300 hover:bg-forest-50 transition-colors">
+          All projects
+        </a>
+        <a href="index.html#contact" class="btn-shine nav-target inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-forest-800 to-forest-500 shadow-lg shadow-forest-500/30 hover:-translate-y-0.5 transition-transform">
+          Contact me
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-forest-100 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-forest-700">
+      <p>© <span id="year"></span> Israfil Hossain — Full Stack Developer</p>
+      <p class="text-forest-500">Built with Tailwind · Three.js · lots of ☕</p>
+    </div>
+  </footer>
+
+  <a href="#top" id="toTop" class="nav-target" aria-label="Back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

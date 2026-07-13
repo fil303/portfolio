@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Israfil Hossain — Full Stack Developer</title>
+  <meta name="description" content="Israfil Hossain — Full Stack Developer specializing in Laravel, Node.js, Web3 and high-traffic crypto trading platforms." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Three.js (UMD global) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="assets/config.js"></script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body id="top" class="antialiased">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Cursor + progress -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div id="scrollbar"></div>
+
+  <!-- ================= NAV ================= -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto mt-3 px-5 py-3 glass rounded-2xl flex items-center justify-between mx-4 md:mx-auto">
+      <a href="#home" class="flex items-center gap-2 font-grotesk font-bold text-lg tracking-tight text-forest-900 nav-target">
+        <span class="grid place-items-center w-9 h-9 rounded-xl glass-deep text-mint font-sora">IH</span>
+        <span class="hidden sm:block">Israfil<span class="text-forest-500">.</span></span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium text-forest-900/80">
+        <li><a href="#home"     class="nav-link nav-target">Home</a></li>
+        <li><a href="#story"    class="nav-link nav-target">Story</a></li>
+        <li><a href="#skills"   class="nav-link nav-target">Skills</a></li>
+        <li><a href="#projects" class="nav-link nav-target">Projects</a></li>
+        <li><a href="#contact"  class="nav-link nav-target">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="hidden md:inline-flex btn-shine nav-target items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-forest-800 to-forest-500 shadow-lg shadow-forest-500/30 hover:shadow-forest-500/50 transition-shadow">
+        Let's talk
+      </a>
+
+      <!-- mobile toggle -->
+      <button id="menuBtn" class="md:hidden nav-target w-10 h-10 grid place-items-center rounded-xl glass text-forest-900" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden mx-4 mt-2 glass rounded-2xl p-4">
+      <ul class="flex flex-col gap-1 text-forest-900 font-medium">
+        <li><a href="#home"     class="mob block px-4 py-3 rounded-xl hover:bg-forest-50">Home</a></li>
+        <li><a href="#story"    class="mob block px-4 py-3 rounded-xl hover:bg-forest-50">Story</a></li>
+        <li><a href="#skills"   class="mob block px-4 py-3 rounded-xl hover:bg-forest-50">Skills</a></li>
+        <li><a href="#projects" class="mob block px-4 py-3 rounded-xl hover:bg-forest-50">Projects</a></li>
+        <li><a href="#contact"  class="mob block px-4 py-3 rounded-xl hover:bg-forest-50">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="relative min-h-screen flex items-center pt-28 pb-16">
+    <!-- three.js canvas -->
+    <canvas id="three-canvas" class="absolute inset-0 w-full h-full -z-0"></canvas>
+    <div class="absolute inset-0 grid-bg -z-0 opacity-60"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center w-full">
+      <!-- left -->
+      <div class="fade-up">
+        <span class="inline-flex items-center badge-pulse px-4 py-1.5 rounded-full text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200">
+          Currently employed @ Itech Soft Solution
+        </span>
+
+        <h1 class="mt-6 font-grotesk font-bold text-5xl sm:text-6xl leading-[1.05] tracking-tight text-forest-950">
+          Israfil<br>
+          <span class="text-gradient">Hossain</span>
+        </h1>
+
+        <p class="mt-3 text-lg font-semibold text-forest-700">Full Stack Developer</p>
+
+        <p class="mt-5 max-w-md text-forest-900/70 leading-relaxed">
+          4+ years building scalable web apps & <span class="font-semibold text-forest-700">high-traffic crypto trading platforms</span> —
+          backend services, blockchain integration, and rock-solid availability with Redis, queues & Nginx.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#projects" class="btn-shine nav-target inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-forest-800 to-forest-500 shadow-lg shadow-forest-500/30 hover:-translate-y-0.5 transition-transform">
+            View my work
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="/israfil-hossain-cv.pdf" onclick="return false;" title="Add your CV file as israfil-hossain-cv.pdf" class="nav-target inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-forest-800 border border-forest-300 hover:bg-forest-50 transition-colors">
+            Download CV
+          </a>
+        </div>
+
+        <!-- socials -->
+        <div class="mt-9 flex items-center gap-3">
+          <!-- GitHub (real) -->
+          <a href="https://github.com/fil303" target="_blank" rel="noopener" class="social nav-target" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.71c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.79-4.58 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+          </a>
+          <!-- GitLab (real) -->
+          <a href="https://gitlab.com/fil303" target="_blank" rel="noopener" class="social nav-target" title="GitLab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="m12 21.42 3.68-11.33H8.32L12 21.42Zm-9.9-11.33 -1.12 3.46a.77.77 0 0 0 .28.86L12 21.42 2.1 10.09Zm6.22 0H2.1l1.86-5.72c.1-.29.5-.29.6 0l1.76 5.72Zm11.36 0h-6.22l1.76-5.72c.1-.29.5-.29.6 0l1.86 5.72ZM12 21.42l3.68-11.33h5.9L12 21.42Zm9.9-11.33 1.12 3.46a.77.77 0 0 1-.28.86L12 21.42l9.9-11.33Z"/></svg>
+          </a>
+          <!-- LinkedIn (placeholder) -->
+          <a href="#" data-placeholder="linkedin" target="_blank" rel="noopener" class="social nav-target" title="LinkedIn (add URL)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.2.8 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+          </a>
+          <!-- WhatsApp (placeholder) -->
+          <a href="#" data-placeholder="whatsapp" target="_blank" rel="noopener" class="social nav-target" title="WhatsApp (add URL)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35ZM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.42 9.42 0 0 1 14.63-11.6 9.36 9.36 0 0 1 2.76 6.66c0 5.2-4.24 9.36-9.4 9.36ZM20.52 3.45A11.32 11.32 0 0 0 12.04.02C5.8.02.73 5.09.73 11.32c0 2 .52 3.94 1.52 5.66L.64 23.4l6.57-1.72a11.29 11.29 0 0 0 5.42 1.38h.01c6.23 0 11.3-5.07 11.3-11.3 0-3.02-1.17-5.86-3.42-8Z"/></svg>
+          </a>
+          <!-- Fiverr (placeholder) -->
+          <a href="#" data-placeholder="fiverr" target="_blank" rel="noopener" class="social nav-target !w-auto px-4 gap-2" title="Fiverr (add URL)">
+            <span class="font-grotesk font-bold text-[15px]">fiverr<span class="text-forest-500">.</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- right: photo tilt card -->
+      <div class="fade-up delay flex justify-center lg:justify-end">
+        <div id="photoCard" class="tilt border-glow float-slow relative w-72 sm:w-80 rounded-3xl">
+          <div class="glass rounded-3xl p-3 relative overflow-hidden">
+            <img src="israfil-hossain.png" alt="Israfil Hossain" class="rounded-2xl w-full object-cover select-none pointer-events-none" />
+            <div class="absolute inset-x-3 bottom-3 glass-deep rounded-2xl px-4 py-3 flex items-center justify-between" style="transform:translateZ(40px)">
+              <div>
+                <p class="text-white font-semibold text-sm">Israfil Hossain</p>
+                <p class="text-mint text-xs">@fil303</p>
+              </div>
+              <span class="text-mint text-xs font-semibold flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Online
+              </span>
+            </div>
+          </div>
+          <!-- floating chips -->
+          <div class="absolute -left-6 top-10 glass rounded-xl px-3 py-2 text-xs font-semibold text-forest-700 shadow-lg" style="transform:translateZ(60px)">⚡ 4+ yrs</div>
+          <div class="absolute -right-5 bottom-24 glass rounded-xl px-3 py-2 text-xs font-semibold text-forest-700 shadow-lg" style="transform:translateZ(60px)">🚀 Laravel</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#story" class="nav-target absolute bottom-6 left-1/2 -translate-x-1/2 text-forest-600/70 flex flex-col items-center gap-1 text-xs">
+      <span>Scroll</span>
+      <span class="w-5 h-8 rounded-full border border-forest-400/60 grid place-items-start p-1"><span class="w-1 h-2 rounded-full bg-forest-500 animate-bounce"></span></span>
+    </a>
+  </section>
+
+  <!-- ================= STORY ================= -->
+  <section id="story" class="relative py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal mb-14">
+        <p class="text-forest-500 font-semibold tracking-widest text-sm uppercase">My Story</p>
+        <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-forest-950 mt-2">About & Journey</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <!-- summary -->
+        <div class="reveal glass rounded-3xl p-8 lg:col-span-1">
+          <h3 class="font-grotesk font-bold text-xl text-forest-900 mb-3">Who I am</h3>
+          <p class="text-forest-900/70 leading-relaxed text-[15px]">
+            Software developer with 4+ years building scalable web applications. Proficient in PHP & JavaScript,
+            experienced with Laravel. Played a key role in a cryptocurrency trading platform with lots of active users —
+            backend services, blockchain integration, and high availability with Redis, Supervisor & queue management.
+            Focused on clean, efficient code and robust solutions.
+          </p>
+          <div class="mt-6 grid grid-cols-2 gap-4">
+            <div class="glass rounded-2xl p-4 text-center">
+              <p class="font-grotesk font-bold text-3xl text-gradient">4+</p>
+              <p class="text-xs text-forest-700 mt-1">Years experience</p>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+              <p class="font-grotesk font-bold text-3xl text-gradient">5+</p>
+              <p class="text-xs text-forest-700 mt-1">Major platforms</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- timeline -->
+        <div class="reveal lg:col-span-2 glass rounded-3xl p-8">
+          <h3 class="font-grotesk font-bold text-xl text-forest-900 mb-6">Experience & Education</h3>
+          <div class="relative border-l-2 border-forest-200 pl-6 space-y-8">
+
+            <div class="relative">
+              <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-forest-500 ring-4 ring-forest-100"></span>
+              <div class="flex flex-wrap items-center gap-x-3">
+                <h4 class="font-semibold text-forest-900">Jr. Software Engineer</h4>
+                <span class="text-xs font-semibold text-forest-500 bg-forest-50 px-2 py-0.5 rounded-full">05/2022 – 07/2026</span>
+              </div>
+              <p class="text-sm text-forest-700 font-medium">Itech Soft Solution · Khulna, Bangladesh</p>
+              <p class="text-sm text-forest-900/65 mt-2 leading-relaxed">
+                Backend developer (Laravel & ExpressJS). Designed robust APIs for web & mobile, integrated payment gateways,
+                and built a Sodium-based encrypt/decrypt system for crypto wallet private keys in PHP & Node.js.
+                Deployed & tuned apps on Ubuntu VPS with Nginx.
+              </p>
+            </div>
+
+            <div class="relative">
+              <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-forest-400 ring-4 ring-forest-100"></span>
+              <div class="flex flex-wrap items-center gap-x-3">
+                <h4 class="font-semibold text-forest-900">Software Engineer (Intern)</h4>
+                <span class="text-xs font-semibold text-forest-500 bg-forest-50 px-2 py-0.5 rounded-full">09/2021 – 03/2022</span>
+              </div>
+              <p class="text-sm text-forest-700 font-medium">Apitsoft · Khulna, Bangladesh</p>
+              <p class="text-sm text-forest-900/65 mt-2 leading-relaxed">
+                Built a task-management system in Laravel — CRUD for tasks, users & projects, responsive UI with Bootstrap & JS,
+                and hands-on MVC + RESTful API practice.
+              </p>
+            </div>
+
+            <div class="relative">
+              <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-forest-300 ring-4 ring-forest-100"></span>
+              <div class="flex flex-wrap items-center gap-x-3">
+                <h4 class="font-semibold text-forest-900">Bachelor of Arts (Pass)</h4>
+                <span class="text-xs font-semibold text-forest-500 bg-forest-50 px-2 py-0.5 rounded-full">2023 – Current</span>
+              </div>
+              <p class="text-sm text-forest-700 font-medium">Government Brajalal College · Khulna</p>
+            </div>
+
+            <div class="relative">
+              <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-forest-300 ring-4 ring-forest-100"></span>
+              <div class="flex flex-wrap items-center gap-x-3">
+                <h4 class="font-semibold text-forest-900">Higher School Certificate</h4>
+                <span class="text-xs font-semibold text-forest-500 bg-forest-50 px-2 py-0.5 rounded-full">2018 – 2019</span>
+              </div>
+              <p class="text-sm text-forest-700 font-medium">Khanjahan Ali Ideal College · Khulna</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitLab activity -->
+      <div class="reveal glass rounded-3xl p-6 sm:p-8 mt-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-grotesk font-bold text-xl text-forest-900">GitLab Activity</h3>
+          <a href="https://gitlab.com/fil303" target="_blank" rel="noopener" class="nav-target text-sm font-semibold text-forest-500 hover:text-forest-700">View all →</a>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-forest-100 bg-white/60 p-2">
+          <img src="gitlab-activity.png" alt="GitLab contribution activity" class="rounded-xl min-w-[640px] w-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="relative py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal mb-14">
+        <p class="text-forest-500 font-semibold tracking-widest text-sm uppercase">Toolbox</p>
+        <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-forest-950 mt-2">Skills & Proficiency</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-x-14 gap-y-7" id="skillGrid">
+        <!-- bars injected below via markup -->
+        <div class="skill reveal"     data-level="95"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">PHP / Laravel</span><span class="pct font-grotesk font-bold text-forest-500">95%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="95%" style="width:95%"></div></div></div>
+        <div class="skill reveal" data-level="90"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">MySQL / SQL</span><span class="pct font-grotesk font-bold text-forest-500">90%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="90%" style="width:90%"></div></div></div>
+        <div class="skill reveal" data-level="88"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">JavaScript</span><span class="pct font-grotesk font-bold text-forest-500">88%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="88%" style="width:88%"></div></div></div>
+        <div class="skill reveal" data-level="82"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">ExpressJS / Node.js</span><span class="pct font-grotesk font-bold text-forest-500">82%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="82%" style="width:82%"></div></div></div>
+        <div class="skill reveal" data-level="85"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">Tailwind / CSS</span><span class="pct font-grotesk font-bold text-forest-500">85%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="85%" style="width:85%"></div></div></div>
+        <div class="skill reveal" data-level="78"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">Web3.js / Blockchain</span><span class="pct font-grotesk font-bold text-forest-500">78%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="78%" style="width:78%"></div></div></div>
+        <div class="skill reveal" data-level="84"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">Redis / Queues</span><span class="pct font-grotesk font-bold text-forest-500">84%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="84%" style="width:84%"></div></div></div>
+        <div class="skill reveal" data-level="80"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">Linux / Nginx</span><span class="pct font-grotesk font-bold text-forest-500">80%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="80%" style="width:80%"></div></div></div>
+        <div class="skill reveal" data-level="75"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">Docker</span><span class="pct font-grotesk font-bold text-forest-500">75%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="75%" style="width:75%"></div></div></div>
+        <div class="skill reveal" data-level="90"><div class="flex justify-between mb-2"><span class="font-semibold text-forest-900">Git / GitLab</span><span class="pct font-grotesk font-bold text-forest-500">90%</span></div><div class="h-2.5 rounded-full bg-forest-100 overflow-hidden"><div class="skill-fill h-full rounded-full bg-gradient-to-r from-forest-700 to-forest-400" data-w="90%" style="width:90%"></div></div></div>
+      </div>
+
+      <!-- tech chips -->
+      <div class="reveal mt-12 flex flex-wrap gap-3">
+        <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">PHP</span><span class="chip">Laravel</span>
+        <span class="chip">JavaScript</span><span class="chip">ExpressJS</span><span class="chip">Web3JS</span><span class="chip">API</span>
+        <span class="chip">XDebugger</span><span class="chip">MySQL</span><span class="chip">Docker</span><span class="chip">WebSocket</span>
+        <span class="chip">Git</span><span class="chip">Linux</span><span class="chip">SQL</span><span class="chip">PHPStan</span><span class="chip">Tailwind</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="relative py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal mb-14">
+        <p class="text-forest-500 font-semibold tracking-widest text-sm uppercase">Portfolio</p>
+        <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-forest-950 mt-2">Featured Projects</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="relative py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal border-glow rounded-3xl">
+        <div class="glass-deep rounded-3xl p-10 sm:p-14 text-center relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-emerald-400/20 blur-3xl"></div>
+          <p class="text-mint font-semibold tracking-widest text-sm uppercase">Get in touch</p>
+          <h2 class="font-grotesk font-bold text-4xl sm:text-5xl text-white mt-2">Let's build something great</h2>
+          <p class="text-mint/80 mt-4 max-w-xl mx-auto">Have a project, a role, or a question? I'm always happy to talk backend, blockchain, or scalable systems.</p>
+
+          <div class="mt-9 flex flex-wrap justify-center gap-4">
+            <a href="mailto:webfil303@gmail.com" class="btn-shine nav-target inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-forest-900 bg-mint hover:bg-white transition-colors">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+              webfil303@gmail.com
+            </a>
+            <a href="tel:+8801403221969" class="nav-target inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white border border-mint/40 hover:bg-white/10 transition-colors">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              +880 1403 221969
+            </a>
+          </div>
+
+          <div class="mt-8 flex items-center justify-center gap-3">
+            <a href="https://github.com/fil303" target="_blank" rel="noopener" class="social-dark nav-target" title="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.71c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.79-4.58 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+            <a href="https://gitlab.com/fil303" target="_blank" rel="noopener" class="social-dark nav-target" title="GitLab"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m12 21.42 3.68-11.33H8.32L12 21.42Zm-9.9-11.33-1.12 3.46a.77.77 0 0 0 .28.86L12 21.42 2.1 10.09Zm6.22 0H2.1l1.86-5.72c.1-.29.5-.29.6 0l1.76 5.72Zm11.36 0h-6.22l1.76-5.72c.1-.29.5-.29.6 0l1.86 5.72Z"/></svg></a>
+            <a href="#" data-placeholder="linkedin" target="_blank" rel="noopener" class="social-dark nav-target" title="LinkedIn (add URL)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg></a>
+            <a href="#" data-placeholder="whatsapp" target="_blank" rel="noopener" class="social-dark nav-target" title="WhatsApp (add URL)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35ZM12.05 21.5a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.42 9.42 0 1 1 8.98 4.42Z"/></svg></a>
+            <a href="#" data-placeholder="fiverr" target="_blank" rel="noopener" class="social-dark nav-target !w-auto px-4" title="Fiverr (add URL)"><span class="font-grotesk font-bold text-sm text-white">fiverr<span class="text-mint">.</span></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-forest-100 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-forest-700">
+      <p>© <span id="year"></span> Israfil Hossain — Full Stack Developer</p>
+      <p class="text-forest-500">Built with Tailwind · Three.js · lots of ☕</p>
+    </div>
+  </footer>
+
+  <a href="#top" id="toTop" class="nav-target" aria-label="Back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

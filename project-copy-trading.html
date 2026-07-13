@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spot Copy Trading Platform — Israfil Hossain</title>
+  <meta name="description" content="Followers automatically mirror an experienced Lead Trader — when the lead opens, modifies or closes a position, the same trade is executed in every followe" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body id="top" class="antialiased">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div id="scrollbar"></div>
+
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto mt-3 px-5 py-3 glass rounded-2xl flex items-center justify-between mx-4 md:mx-auto">
+      <a href="index.html" class="flex items-center gap-2 font-grotesk font-bold text-lg tracking-tight text-forest-900 nav-target">
+        <span class="grid place-items-center w-9 h-9 rounded-xl glass-deep text-mint font-sora">IH</span>
+        <span class="hidden sm:block">Israfil<span class="text-forest-500">.</span></span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium text-forest-900/80">
+        <li><a href="index.html#home"     class="nav-link nav-target">Home</a></li>
+        <li><a href="index.html#story"    class="nav-link nav-target">Story</a></li>
+        <li><a href="index.html#skills"   class="nav-link nav-target">Skills</a></li>
+        <li><a href="index.html#projects" class="nav-link nav-target active">Projects</a></li>
+        <li><a href="index.html#contact"  class="nav-link nav-target">Contact</a></li>
+      </ul>
+
+      <a href="index.html#contact" class="hidden md:inline-flex btn-shine nav-target items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-forest-800 to-forest-500 shadow-lg shadow-forest-500/30 hover:shadow-forest-500/50 transition-shadow">
+        Let's talk
+      </a>
+
+      <button id="menuBtn" class="md:hidden nav-target w-10 h-10 grid place-items-center rounded-xl glass text-forest-900" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="md:hidden hidden mx-4 mt-2 glass rounded-2xl p-4">
+      <ul class="flex flex-col gap-1 text-forest-900 font-medium">
+        <li><a href="index.html#home"     class="block px-4 py-3 rounded-xl hover:bg-forest-50">Home</a></li>
+        <li><a href="index.html#story"    class="block px-4 py-3 rounded-xl hover:bg-forest-50">Story</a></li>
+        <li><a href="index.html#skills"   class="block px-4 py-3 rounded-xl hover:bg-forest-50">Skills</a></li>
+        <li><a href="index.html#projects" class="block px-4 py-3 rounded-xl hover:bg-forest-50">Projects</a></li>
+        <li><a href="index.html#contact"  class="block px-4 py-3 rounded-xl hover:bg-forest-50">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= PROJECT HERO ================= -->
+  <section class="relative pt-36 pb-16 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-60"></div>
+    <div class="absolute -top-24 right-0 w-[28rem] h-[28rem] rounded-full bg-forest-200/40 blur-3xl"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6">
+      <a href="index.html#projects" class="nav-target inline-flex items-center gap-2 text-sm font-semibold text-forest-600 hover:text-forest-800 transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        Back to projects
+      </a>
+
+      <div class="fade-up mt-7 flex items-start gap-5">
+        <div class="w-16 h-16 flex-none rounded-2xl glass-deep grid place-items-center text-3xl">🤝</div>
+        <div>
+          <span class="text-xs font-semibold text-forest-500 bg-forest-50 border border-forest-100 px-3 py-1 rounded-full">Backend Developer</span>
+          <h1 class="font-grotesk font-bold text-4xl sm:text-5xl text-forest-950 mt-3 leading-tight">Spot Copy Trading Platform</h1>
+        </div>
+      </div>
+
+      <p class="fade-up delay mt-6 text-lg text-forest-900/70 leading-relaxed max-w-3xl">Followers automatically mirror an experienced Lead Trader — when the lead opens, modifies or closes a position, the same trade is executed in every follower's account, scaled to their allocation.</p>
+
+      <div class="fade-up delay mt-8 flex flex-wrap gap-2">
+        <span class="chip">Laravel</span>
+        <span class="chip">NextJS</span>
+        <span class="chip">Redis</span>
+        <span class="chip">Nginx</span>
+        <span class="chip">PHP 8.4</span>
+        <span class="chip">MySQL</span>
+      </div>
+
+      <div class="fade-up delay mt-10 grid sm:grid-cols-3 gap-4">
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Role</p>
+          <p class="font-semibold text-forest-900 mt-1">Backend Developer</p>
+        </div>
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Stack</p>
+          <p class="font-semibold text-forest-900 mt-1">Laravel · Next.js</p>
+        </div>
+        <div class="glass rounded-2xl px-5 py-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-forest-500">Pattern</p>
+          <p class="font-semibold text-forest-900 mt-1">1 lead → N followers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BODY ================= -->
+  <main class="relative max-w-5xl mx-auto px-6 pb-24 space-y-6">
+
+    <!-- Overview -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Overview</h2>
+      <div class="mt-4 space-y-4 text-forest-900/70 leading-relaxed">
+        <p>Copy trading lets a user pick an experienced <strong>Lead Trader</strong> and follow them. When the lead opens, modifies or closes a position, the platform automatically executes the same trade in the followers' accounts, sized according to each follower's allocated investment and copy settings.</p>
+        <p>Crucially, each follower keeps full ownership of their own funds and takes their own profits and losses — the lead never touches follower money. The lead earns a profit-sharing commission out of the followers' <em>realized</em> profits.</p>
+        <p>I built the backend replication engine: the fan-out from one lead action to many follower orders, the proportional sizing, and the commission settlement.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Key Features</h2>
+      <ul class="feature-list mt-6 sm:columns-2 sm:gap-10">
+        <li><strong>Lead trader profiles</strong> — public performance stats so followers can choose who to copy.</li>
+        <li><strong>Follow with an allocation</strong> — a follower commits a specific amount, not their whole balance.</li>
+        <li><strong>Automatic mirroring</strong> — open, modify and close events are replicated to every active follower.</li>
+        <li><strong>Proportional sizing</strong> — each follower's order is scaled to their allocation, not copied 1:1.</li>
+        <li><strong>Profit-share commission</strong> — the lead earns an agreed cut of realized follower profit.</li>
+        <li><strong>Follower controls</strong> — stop copying, set risk limits, or withdraw at any time; funds stay in the follower's own account.</li>
+      </ul>
+    </section>
+
+    <!-- Responsibilities -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">What I Did</h2>
+      <ul class="feature-list mt-6">
+        <li>Built the replication engine that fans a single lead action out to all of that lead's active followers.</li>
+        <li>Implemented proportional order sizing based on each follower's allocated investment and copy settings.</li>
+        <li>Implemented the profit-sharing commission — calculated on realized profit only, and settled to the lead.</li>
+        <li>Kept follower funds isolated: a follower's balance is only ever debited for their own mirrored trade.</li>
+        <li>Pushed the fan-out through <strong>queue workers</strong> so a lead with many followers doesn't block the lead's own request.</li>
+        <li>Designed the APIs backing the Next.js frontend and the mobile app.</li>
+      </ul>
+    </section>
+
+    <!-- Challenges -->
+    <section class="reveal glass rounded-3xl p-8 sm:p-10">
+      <h2 class="font-grotesk font-bold text-2xl text-forest-950">Challenges &amp; How I Solved Them</h2>
+      <div class="mt-6 space-y-6">
+        <div class="challenge flex gap-4">
+          <div class="num">1</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Fan-out under load</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">One lead closing a position can mean hundreds of follower orders at once. The replication runs as queued jobs per follower, so the lead's own trade returns immediately and the copies are processed by workers in parallel.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">2</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Followers who can&#x27;t fill</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">A follower may not have enough balance, or may have stopped copying mid-trade. Each follower's copy is evaluated independently — one failure is recorded and skipped rather than aborting the whole fan-out.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">3</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Commission only on real profit</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">A lead should not earn commission on a position that lost money, and should not be paid twice for the same profit. Commission is computed from realized profit at close, per follower, per position.</p>
+          </div>
+        </div>
+        <div class="challenge flex gap-4">
+          <div class="num">4</div>
+          <div>
+            <h3 class="font-semibold text-forest-900">Duplicate replication</h3>
+            <p class="text-forest-900/70 mt-1 leading-relaxed">A retried queue job must not open a second copy of the same trade. Copy jobs are idempotent — keyed on the lead's action, so re-running one is a no-op.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="reveal border-glow rounded-3xl">
+      <div class="glass-deep rounded-3xl p-8 sm:p-10">
+        <h2 class="font-grotesk font-bold text-2xl text-white">Tech Stack</h2>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Laravel</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">NextJS</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Redis</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">Nginx</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">PHP 8.4</span>
+          <span class="px-4 py-2 rounded-xl text-sm font-semibold text-mint bg-white/10 border border-mint/25">MySQL</span>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="reveal flex flex-col sm:flex-row items-center justify-between gap-5 glass rounded-3xl p-8 sm:p-10">
+      <div>
+        <h2 class="font-grotesk font-bold text-xl text-forest-950">Want the full picture?</h2>
+        <p class="text-forest-900/65 mt-1">Browse the other case studies, or get in touch about a role or project.</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="index.html#projects" class="nav-target inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-forest-800 border border-forest-300 hover:bg-forest-50 transition-colors">
+          All projects
+        </a>
+        <a href="index.html#contact" class="btn-shine nav-target inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-forest-800 to-forest-500 shadow-lg shadow-forest-500/30 hover:-translate-y-0.5 transition-transform">
+          Contact me
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-forest-100 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-forest-700">
+      <p>© <span id="year"></span> Israfil Hossain — Full Stack Developer</p>
+      <p class="text-forest-500">Built with Tailwind · Three.js · lots of ☕</p>
+    </div>
+  </footer>
+
+  <a href="#top" id="toTop" class="nav-target" aria-label="Back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

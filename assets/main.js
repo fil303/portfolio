@@ -7,9 +7,9 @@
 /* ============ 1. Your social URLs — EDIT THESE ============
    Fill these in once and every button on every page goes live. */
 const SOCIALS = {
-  linkedin: '',   // e.g. 'https://www.linkedin.com/in/your-handle'
-  whatsapp: '',   // e.g. 'https://wa.me/8801403221969'
-  fiverr:   ''    // e.g. 'https://www.fiverr.com/your-handle'
+  linkedin: 'https://www.linkedin.com/in/israfil-hossain-968036205',
+  whatsapp: 'https://wa.me/+8801403221969',
+  fiverr:   'https://www.fiverr.com/fil303' 
 };
 
 /* ============ 2. Projects (single source of truth) ============
